@@ -86,6 +86,8 @@
 *****************************************************************************
 
 *** Next ***
+- HAL: Implemented better handling for number of endpoints on STM32 OTGv1
+       driver, now it is a registry key.
 - VAR: Updated CMSIS file for STM32F1xx to 4.1.0.
 - EX:  Added thermometer implementation for ST HTS221 device.
 - EX:  Added hygrometer implementation for ST HTS221 device.
@@ -145,6 +147,14 @@
 - RT:  Merged RT4.
 - NIL: Merged NIL2.
 - NIL: Added STM32F7 demo.
+- HAL: Fixed Makefile dependencies not generated for .S files (bug #787)
+       (backported to 16.1.6, 3.0.6).
+- HAL: Fixed OTGv1 driver not functional on STM32L4 (bug #786)(backported
+       to 16.1.6).
+- HAL: Fixed wrong bit offset in STM32F37x ADC_CR2_EXTSEL_SRC() macro
+       (bug #785)(backported to 16.1.6, 3.0.6).
+- RT:  Fixed tick-less mode can fail in RT for very large delays (bug #784)
+       (backported to 16.1.6, 3.0.6).
 - HAL: Fixed STM32L0xx CCIPR initialization (bug #783) 
        (backported to 16.1.6).
 - HAL: Fixed STM32F105 port not compiling (bug #782)
